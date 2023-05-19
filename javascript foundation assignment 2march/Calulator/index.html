@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function calculator() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let result;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+                default:
+                    console.log("Invalid Operator");
+                    alert("Invalide Operator");
+                    return;
+            }
+            console.log("Result:", result);
+            alert("Result: " + result);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Calculator</h1><br>
+            <input type="number" name="num1" id="num1"><br><br>
+            <input type="number" name="num1" id="num2"><br><br>
+            <input type="text" name="operator" id="operator" placeholder="Operators Ex. +,-,*,/"><br><br>
+            <button onclick="calculator()">Calculate</button><br><br>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

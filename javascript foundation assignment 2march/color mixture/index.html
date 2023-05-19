@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Mixture</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1 class="h1">Color Mixture</h1>
+            <div class="colorcombi">
+                <input type="text" name="color1" id="color1">
+                <input type="text" name="color2" id="color2">
+                <input type="submit" value="Result" onclick="mixColor()">
+                <div id="print"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mixColor() {
+            let color1 = document.getElementById("color1").value;
+            let color2 = document.getElementById("color2").value;
+            let resultColor;
+
+            switch (color1) {
+                case "red":
+                    switch (color2) {
+                        case "blue":
+                            resultColor = "purple";
+                            break;
+                        case "yellow":
+                            resultColor = "orange";
+                            break;
+                        default:
+                            resultColor = "invalid combination";
+                    }
+                    break;
+                case "blue":
+                    switch (color2) {
+                        case "red":
+                            resultColor = "purple";
+                            break;
+                        case "yellow":
+                            resultColor = "green";
+                            break;
+                        default:
+                            resultColor = "invalid combination";
+                    }
+                    break;
+                case "yellow":
+                    switch (color2) {
+                        case "red":
+                            resultColor = "orange";
+                            break;
+                        case "blue":
+                            resultColor = "green";
+                            break;
+                        default:
+                            resultColor = "invalid combination";
+                    }
+                    break;
+                default:
+                    resultColor = "invalid combination"
+
+            }
+
+            let result = document.getElementById("print");
+            if (resultColor === "invalid combination") {
+                result.innerHTML = `<p style="color:black">${resultColor}</p>`;
+            }else{
+                result.innerHTML = `<p>The resulting color is: <span style="color:${resultColor}">${resultColor}</span></p>`;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

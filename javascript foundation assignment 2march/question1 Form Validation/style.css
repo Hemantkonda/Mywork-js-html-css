@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.formmain{
+    border: 1px solid;
+    padding: 30px;
+    
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+input#pass, #cpass {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px;
+}
+
+#demo{
+    margin: 10px;
+    font-size: 30px;
+}
+
+button {
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+}

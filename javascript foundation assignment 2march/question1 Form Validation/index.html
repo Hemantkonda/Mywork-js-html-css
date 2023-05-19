@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <!-- style-link -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="form">
+        <div class="box">
+            <h2>Form Validation</h2>
+            <div class="formmain">
+                <input type="password" name="password" id="pass" placeholder="Enter password"><br><br>
+                <input type="password" name="cpass" id="cpass" placeholder="Confirm Password"><br><br>
+                <button type="submit" id="submit"> Submit</button>
+
+                <p id="demo">Result</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // targeting button to perform onclick action
+        let submitBtn = document.querySelector("#submit");
+
+        // adding event to button onclick action
+        submitBtn.addEventListener("click", () => {
+
+            let pass = document.getElementById("pass").value;
+            let cpass = document.getElementById("cpass").value;
+
+            // to pring our output
+            let output = document.getElementById("demo");
+            
+            // giving condition to check password
+            if (pass === cpass) {
+                output.innerText = "matched"
+                console.log("matched")
+            } else {
+                output.innerText = "not Matched"
+                console.log("not Matched")
+            }
+        })
+    </script>
+    
+</body>
+
+</html>

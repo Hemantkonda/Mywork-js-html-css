@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dblclick{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.new{
+    color: goldenrod;
+    background-color: black;
+    padding: 10px;
+    font-size: 30px;
+}

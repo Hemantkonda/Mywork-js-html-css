@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100vh;
+}
+
+.counter-box {
+    border: 1px solid;
+    padding: 10px;
+}
+
+.main {
+    display: flex;
+}
+
+h2{
+    text-align: center;
+}
+
+button#decrement, #increment {
+    margin: 20px;
+    cursor: pointer;
+}
+
+span#displayValue {
+    margin: 15px;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+
+#reset{
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+}

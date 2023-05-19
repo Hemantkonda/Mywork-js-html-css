@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Remove Duplicate Items from Cart</title>
+  </head>
+  <body>
+    <h1>Remove Duplicate Items from Cart</h1>
+    <label for="cart-input">Enter items in your cart (separated by commas):</label>
+    <input type="text" id="cart-input" placeholder="e.g. apple, banana, orange">
+    <button onclick="removeDuplicates()">Remove Duplicates</button>
+    <ul id="unique-cart"></ul>
+    <script>
+      function removeDuplicates() {
+        // Get the input element and the list element
+        const cartInput = document.getElementById("cart-input");
+        const uniqueCart = document.getElementById("unique-cart");
+
+        // Split the cart items by comma and create a Set to remove duplicates
+        const items = cartInput.value.split(",");
+        const uniqueItems = new Set(items);
+
+        // Clear the previous list items
+        uniqueCart.innerHTML = "";
+
+        // Create a new list item for each unique item and append it to the list
+        uniqueItems.forEach((item) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = item.trim();
+          uniqueCart.appendChild(listItem);
+        });
+      }
+    </script>
+  </body>
+</html>

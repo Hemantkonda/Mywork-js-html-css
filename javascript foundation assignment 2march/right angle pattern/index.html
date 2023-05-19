@@ -1,0 +1,48 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>E-commerce website</title>
+  </head>
+  <body>
+    <h1>Welcome to our E-commerce website!</h1>
+    <p>Please select the items you wish to purchase:</p>
+    <ul>
+      <li>Item 1 <button id="item1">Add to Cart</button></li>
+      <li>Item 2 <button id="item2">Add to Cart</button></li>
+      <li>Item 3 <button id="item3">Add to Cart</button></li>
+    </ul>
+    <h2>Cart</h2>
+    <ul id="cart">
+     
+    </ul>
+
+    <script src="main.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Reverse String After Delay</title>
+</head>
+
+<body>
+  <input type="text" id="input" placeholder="Enter a string" />
+  <button onclick="reverseString()">Reverse after 2 seconds</button>
+  <div id="output"></div>
+  <script>
+    function reverseString() {
+      const inputElement = document.getElementById("input");
+      const outputElement = document.getElementById("output");
+      const input = inputElement.value;
+      outputElement.innerHTML = "Reversing...";
+      setTimeout(() => {
+        const reversed = input.split("").reverse().join("");
+        outputElement.innerHTML = reversed;
+      }, 2000);
+    }
+  </script>
+</body>
+
+</html>
